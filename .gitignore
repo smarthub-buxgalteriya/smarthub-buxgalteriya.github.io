@@ -1,0 +1,7 @@
+# локальные инструменты — на сайт не выкладываем
+editor.html
+editor_server.py
+build_standalone.py
+_backups/
+standalone/
+__pycache__/
