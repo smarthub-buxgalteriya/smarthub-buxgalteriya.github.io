@@ -46,8 +46,9 @@
       content: ""; position: absolute; inset: 0;
       background: radial-gradient(ellipse 62% 40% at 50% 34%, rgba(201, 250, 41, .22), transparent 75%);
     }
+    /* фото крупнее: голова начинается сразу под плашками */
     .hero img {
-      position: absolute; left: -6%; bottom: 0; width: 112%; max-width: none; height: auto;
+      position: absolute; left: -10.5%; bottom: 0; width: 121%; max-width: none; height: auto;
       filter: drop-shadow(0 0 1px rgba(201, 250, 41, .4)) drop-shadow(0 0 16px rgba(201, 250, 41, .12));
       -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 97%);
               mask-image: linear-gradient(to bottom, #000 78%, transparent 97%);
@@ -66,10 +67,12 @@
     .chips span:first-child { border-radius: 0 999px 999px 0; }
     .chips span:last-child { border-radius: 999px 0 0 999px; }
     .hero__text { position: absolute; z-index: 2; left: 0; right: 0; bottom: 4px; padding: 0 var(--side); }
+    /* крупный заголовок: каждое слово своей строкой, ширина подогнана под экран */
     h1 {
-      font-size: 29px; font-weight: 800; line-height: .98; text-transform: uppercase;
+      font-size: clamp(32px, 11.2vw, 54px); font-weight: 900; line-height: .95; text-transform: uppercase;
       color: var(--accent); text-shadow: 0 0 30px rgba(201, 250, 41, .35);
     }
+    h1 span { display: block; white-space: nowrap; }
     .hero__sub { margin-top: 7px; font-size: 18.5px; font-weight: 500; line-height: 1.22; }
     .hero__sub b { color: var(--accent); font-weight: 800; }
 
@@ -146,7 +149,7 @@
         <img src="teacher-cut.png" alt="Jamshid Raimov — kurs ustozi" width="1000" height="1000" fetchpriority="high">
       </picture>
       <div class="hero__text">
-        <h1>Maoshingiz yetmayaptimi?</h1>
+        <h1><span>Maoshingiz</span> <span>yetmayaptimi?</span></h1>
         <p class="hero__sub">Buxgalter bo'ling —<br>oyiga <b>24 mln so'm</b> toping</p>
       </div>
     </section>
